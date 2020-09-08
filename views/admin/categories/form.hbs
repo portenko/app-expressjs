@@ -1,0 +1,37 @@
+<form method="post">
+    <div class="card card-sm ">
+        <div class="card-body">
+            <div class="form-row">
+                {{#if model.id}}<input type="hidden" name="id" value="{{model.id}}">{{/if}}
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" value="{{model.name}}" required>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="lang">Lang</label>
+                        <select id="lang" name="lang" class="form-control" required>
+                            <option value="en" {{model.lang}}>en</option>
+                            <option value="ru">ru</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="sort">Sort</label>
+                        <input type="text" class="form-control" id="sort" name="sort" value="{{model.sort}}" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row mt-2">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-primary mr-1">Save</button>
+            <button type="submit" class="btn btn-primary mr-1" name="save_close">Save and close</button>
+            <a href="/admin/categories/" class="btn btn-secondary">Cancel</a>
+        </div>
+    </div>
+</form>

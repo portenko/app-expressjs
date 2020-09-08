@@ -1,0 +1,12 @@
+<div class="row mt-5 text-center">
+    <div class="col-md-12">
+        <img src="/images/logo.png" style="filter: grayscale(100%);">
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-md-12">
+        <h1 class="text-center">{{message}}</h1>
+        <h2 class="text-center">{{error.status}}</h2>
+        {{#if error.stack}}<pre>{{error.stack}}</pre>{{/if}}
+    </div>
+</div>
